@@ -1,0 +1,37 @@
+body {
+    font-family: "Orbitron", sans-serif;
+    background-color: #0D438A;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1d5ba4;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Audiowide", cursive;
+}
+
+.converter {
+    background: #1D5BA4;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #3E81D6;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #D3BD43;
+    color: black;
+}

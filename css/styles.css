@@ -35,3 +35,43 @@ button:hover {
     background-color: #D3BD43;
     color: black;
 }
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+#newsContainer {
+    padding: 20px;
+}
+
+.news-card {
+    background: #1D5BA4;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+}
+
+.converter {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+}
+
+.converter {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}

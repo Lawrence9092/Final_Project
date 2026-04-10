@@ -16,3 +16,17 @@ form.addEventListener("submit", async (e) => {
 
     UIController.displayResult(result, to);
 });
+
+function saveConversion(amount, from, to, result) {
+    let history = JSON.parse(localStorage.getItem("history")) || [];
+
+    history.push({
+        amount,
+        from,
+        to,
+        result,
+        date: new Date().toLocaleString()
+    });
+
+    localStorage.setItem("history", JSON.stringify(history));
+}

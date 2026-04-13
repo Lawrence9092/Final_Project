@@ -1,4 +1,7 @@
+import FavouritesManager from "./FavouritesManager.js";
+
 const newsContainer = document.getElementById("newsContainer");
+const saveBtn = document.getElementById("saveFavorite");
 
 async function fetchNews() {
     try {
@@ -7,11 +10,9 @@ async function fetchNews() {
         );
 
         const data = await response.json();
-
         displayNews(data.articles);
     } catch (error) {
         newsContainer.innerHTML = "<p>Failed to load news.</p>";
-        console.error("News API Error:", error);
     }
 }
 
@@ -19,17 +20,27 @@ function displayNews(articles) {
     newsContainer.innerHTML = "";
 
     articles.slice(0, 6).forEach(article => {
-        const newsCard = document.createElement("div");
-        newsCard.classList.add("news-card");
+        const card = document.createElement("div");
+        card.classList.add("news-card");
 
-        newsCard.innerHTML = `
+        card.innerHTML = `
             <h3>${article.title}</h3>
             <p>${article.description || "No description available."}</p>
             <a href="${article.url}" target="_blank">Read More</a>
         `;
 
-        newsContainer.appendChild(newsCard);
+        newsContainer.appendChild(card);
     });
 }
+
+saveBtn.addEventListener("click", () => {
+    const pair = {
+        from: "USD",
+        to: "EUR"
+    };
+
+    FavouritesManager.save(pair);
+    alert("Saved to favorites!");
+});
 
 fetchNews();

@@ -1,5 +1,8 @@
+import FavouritesManager from "./FavouritesManager.js";
+
 const history = JSON.parse(localStorage.getItem("history")) || [];
 const tbody = document.querySelector("#historyTable tbody");
+const favList = document.getElementById("favoritesList");
 
 history.forEach(item => {
     tbody.innerHTML += `
@@ -11,4 +14,12 @@ history.forEach(item => {
             <td>${item.result}</td>
         </tr>
     `;
+});
+
+const favorites = FavouritesManager.getAll();
+
+favorites.forEach(fav => {
+    const li = document.createElement("li");
+    li.textContent = `${fav.from} → ${fav.to}`;
+    favList.appendChild(li);
 });

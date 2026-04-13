@@ -3,7 +3,6 @@ body {
     background-color: #0D438A;
     color: white;
     margin: 0;
-    padding: 0;
 }
 
 header {
@@ -16,11 +15,27 @@ h1 {
     font-family: "Audiowide", cursive;
 }
 
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+}
+
 .converter {
     background: #1D5BA4;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 button {
@@ -36,16 +51,6 @@ button:hover {
     color: black;
 }
 
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    color: white;
-    margin-right: 15px;
-    text-decoration: none;
-}
-
 #newsContainer {
     padding: 20px;
 }
@@ -55,23 +60,28 @@ nav a {
     padding: 20px;
     margin: 15px 0;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-main {
-    max-width: 900px;
-    margin: auto;
+input, select {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
 }
 
-.converter {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-main {
-    max-width: 900px;
-    margin: auto;
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.converter {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
 }

@@ -1,53 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currency Exchange App</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Exchange</title>
 
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&display=swap" rel="stylesheet" />
 </head>
 <body>
     <header>
         <h1>Currency Exchange</h1>
-
         <nav>
-         <a href="index.html">Home</a>
-         <a href="results.html">History</a>
-         <a href="news.html">News</a>
-         <a href="conversion.html">Trend</a>
+            <a href="index.html">Home</a>
+            <a href="results.html">History</a>
+            <a href="news.html">News</a>
+            <a href="conversion.html">Trend</a>
         </nav>
     </header>
 
     <main>
-    <section class="converter">
-        <h2>Convert Currency</h2>
+        <section class="converter">
+            <h2>Convert Currency</h2>
 
-        <form id="currencyForm">
-            
-            <input type="number" id="amount" placeholder="Enter amount" min="0" step="any">
+            <form id="currencyForm">
+                <input type="number" id="amount" placeholder="Enter amount" min="0" step="any" required />
 
-            <select id="fromCurrency">
-                <option value="USD">USD</option>
-            </select>
+                <select id="fromCurrency">
+                    <option value="USD">USD</option>
+                </select>
 
-            <select id="toCurrency">
-                <option value="EUR">EUR</option>
-                <option value="GBP">GBP</option>
-                <option value="JPY">JPY</option>        
-            </select>
-            <button type="submit">Convert</button>
-        </form>
-    </section>
+                <select id="toCurrency">
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                </select>
 
-    <section id="result">
+                <button type="submit">Convert</button>
+            </form>
+        </section>
 
-        <h3>Results</h3>
-        <p id="conversionResult">Waiting for conversion</p>
-        <script type="module" src="js/main.js"></script>
-    </section>
+        <section id="result">
+            <h3>Result</h3>
+            <p id="conversionResult">Waiting for conversion...</p>
+        </section>
     </main>
-    
+
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
